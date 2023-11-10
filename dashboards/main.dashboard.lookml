@@ -67,17 +67,6 @@
       dimension: set_id_concatted
       _kind_hint: dimension
       _type_hint: string
-    analysis_config:
-      forecasting:
-      - field_name: reps
-        forecast_n: 2
-        forecast_interval: week
-      - field_name: sets
-        forecast_n: 2
-        forecast_interval: week
-      - field_name: sessions
-        forecast_n: 2
-        forecast_interval: week
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
@@ -130,19 +119,18 @@
     label_rotation: 0
     x_axis_datetime_label: "%Y-%m-%d"
     trend_lines: []
-    x_axis_label_rotation: -45
     analysis_config:
       forecasting:
+      - field_name: reps
+        forecast_n: 2
+        forecast_interval: week
+      - field_name: sets
+        forecast_n: 2
+        forecast_interval: week
       - field_name: sessions
         forecast_n: 2
         forecast_interval: week
-        __FILE: erkan_s_legos/dashboards/main.dashboard.lookml
-        __LINE_NUM: 54
-      - field_name: max_reps
-        forecast_n: 2
-        forecast_interval: week
-        __FILE: erkan_s_legos/dashboards/main.dashboard.lookml
-        __LINE_NUM: 57
+    x_axis_label_rotation: -45
     defaults_version: 1
     show_null_points: true
     interpolation: linear
@@ -252,6 +240,7 @@
       max_reps: Reps
       max_weight: Weight
     label_rotation: 0
+    x_axis_label_rotation: -45
     x_axis_datetime_label: "%Y-%m-%d"
     trend_lines: []
     defaults_version: 1
