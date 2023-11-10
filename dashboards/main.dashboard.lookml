@@ -7,6 +7,35 @@
   preferred_slug: 9kdc1NHUym3fhde8FbFne4
 
   elements:
+  - name: logo
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: "![Foo](https://jaarcongresnl2022.agileconsortium.net/wp-content/uploads/2019/10/logo-Xebia.jpg)"
+    row: 100
+    col: 0
+    width: 3
+    height: 3
+  - name: banner
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: "![Banner](https://static.vecteezy.com/system/resources/previews/027/295/549/non_2x/handsome-african-basketball-player-posing-isolated-on-white-background-sport-theme-free-photo.jpg)"
+    row: 0
+    col: 16
+    width: 8
+    height: 5
+  - name: fitibia
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: '<h1 style="text-align: center;font-weight: bold;color:#6c1d5f">Fitibia</h1>'
+    row: 0
+    col: 8
+    width: 8
+    height: 5
+
+
   - name: reps_sets_and_sessions
     title: Reps Sets and Sessions
     model: my_bw_journal
@@ -94,13 +123,10 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    color_application:
-      collection_id: 1bc1f1d8-7461-4bfd-8c3b-424b924287b5
-      palette_id: dd87bc4e-d86f-47b1-b0fd-44110dc0b469
-      options:
-        steps: 5
-        __FILE: erkan_s_legos/dashboards/main.dashboard.lookml
-        __LINE_NUM: 91
+    series_colors:
+      reps: "#6c1d5f"
+      sets: "#bc89b2"
+      sessions: "#483444"
     y_axes: [{label: Reps Avg, orientation: left, series: [{axisId: reps, id: reps,
             name: reps}], showLabels: false, showValues: false, unpinAxis: false, tickDensity: default,
         tickDensityCustom: 5, type: linear}, {label: !!null '', orientation: right,
@@ -112,7 +138,6 @@
     hidden_series: []
     hide_legend: false
     label_value_format: "##"
-    series_colors: {}
     series_labels:
       max_reps: Reps
       max_weight: Weight
@@ -138,7 +163,7 @@
     listen:
       Excercise: my_bw_journal.excercise
       Date: my_bw_journal.date_date
-    row: 0
+    row: 5
     col: 0
     width: 24
     height: 5
@@ -235,7 +260,7 @@
     hide_legend: false
     label_value_format: "##"
     series_colors:
-      max_weight: "#1864B4"
+      max_weight: "#6c1d5f"
     series_labels:
       max_reps: Reps
       max_weight: Weight
@@ -246,7 +271,7 @@
     defaults_version: 1
     show_null_points: true
     interpolation: linear
-    row: 1
+    row: 6
     col: 0
     width: 24
     height: 5
@@ -354,8 +379,7 @@
     hide_legend: false
     label_value_format: "##.#"
     series_colors:
-      max_weight: "#1864B4"
-      max_bodyweight: "#3EB0D5"
+      max_bodyweight: "#6c1d5f"
     series_labels:
       max_reps: Reps
       max_weight: Weight
@@ -369,7 +393,7 @@
     listen:
       Excercise: my_bw_journal.excercise
       Date: my_bw_journal.date_date
-    row: 2
+    row: 7
     col: 0
     width: 24
     height: 5
