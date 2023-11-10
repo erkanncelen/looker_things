@@ -1,3 +1,4 @@
+---
 - dashboard: main
   title: Main
   layout: newspaper
