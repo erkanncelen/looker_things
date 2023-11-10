@@ -1,9 +1,8 @@
 ---
-- dashboard: main
-  title: Main
+- dashboard: My Fitness Journal
+  title: My Fitness Journal
   layout: newspaper
   preferred_viewer: dashboards-next
-  tile_size: 100
 
   filters:
 
