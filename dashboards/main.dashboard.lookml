@@ -14,7 +14,7 @@
     body_text: "![Foo](https://jaarcongresnl2022.agileconsortium.net/wp-content/uploads/2019/10/logo-Xebia.jpg)"
     row: 100
     col: 0
-    width: 3
+    width: 2
     height: 3
   - name: banner
     type: text
@@ -25,15 +25,24 @@
     col: 16
     width: 8
     height: 5
+  - name: empty_box
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: ''
+    row: 0
+    col: 8
+    width: 8
+    height: 2
   - name: fitibia
     type: text
     title_text: ''
     subtitle_text: ''
     body_text: '<h1 style="text-align: center;font-weight: bold;color:#6c1d5f">Fitibia</h1>'
-    row: 0
+    row: 3
     col: 8
     width: 8
-    height: 5
+    height: 3
 
 
   - name: reps_sets_and_sessions
