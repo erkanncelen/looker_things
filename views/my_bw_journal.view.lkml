@@ -69,9 +69,9 @@ view: my_bw_journal {
     sql: ${TABLE}.weight ;;
     action:  {
       label: "Objection"
-      url: "https://hooks.slack.com/services/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"
+      url: "https://url.example"
       icon_url: "https://cdn-icons-png.flaticon.com/512/10295/10295693.png"
-      form_url: "https://hooks.slack.com/services/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/{{ value }}/form.json"
+      form_url: "https://url.example/{{ value }}/form.json"
       param: {
         name: "text"
         value: "value string"
