@@ -69,25 +69,25 @@ view: my_bw_journal {
     sql: ${TABLE}.weight ;;
     action:  {
       label: "Objection"
-      url: "https://example.com/posts"
-      icon_url: "https://looker.com/favicon.ico"
-      form_url: "https://example.com/ping/{{ value }}/form.json"
+      url: "https://hooks.slack.com/services/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"
+      icon_url: "https://cdn-icons-png.flaticon.com/512/10295/10295693.png"
+      form_url: "https://hooks.slack.com/services/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/{{ value }}/form.json"
       param: {
-        name: "name string"
+        name: "text"
         value: "value string"
       }
-      form_param: {
-        name:  "name string"
-        type: textarea
-        label:  "possibly-localized-string"
-        option: {
-          name:  "name string"
-          label:  "possibly-localized-string"
-        }
-        required:  yes
-        description:  "possibly-localized-string"
-        default:  "string"
-      }
+    #   # form_param: {
+    #   #   name:  "text"
+    #   #   type: textarea
+    #   #   label:  "comments"
+    #   #   # option: {
+    #   #   #   name:  "text"
+    #   #   #   label:  "possibly-localized-string"
+    #   #   # }
+    #   #   required:  yes
+    #   #   description:  "possibly-localized-string"
+    #   #   default:  "string"
+    #   # }
     }
   }
   measure: count {
