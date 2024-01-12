@@ -153,17 +153,6 @@
     label_rotation: 0
     x_axis_datetime_label: "%Y-%m-%d"
     trend_lines: []
-    analysis_config:
-      forecasting:
-      - field_name: reps
-        forecast_n: 2
-        forecast_interval: week
-      - field_name: sets
-        forecast_n: 2
-        forecast_interval: week
-      - field_name: sessions
-        forecast_n: 2
-        forecast_interval: week
     x_axis_label_rotation: -45
     defaults_version: 1
     show_null_points: true
@@ -219,11 +208,6 @@
       measure: sessions
       type: count_distinct
       _type_hint: number
-    analysis_config:
-      forecasting:
-      - field_name: max_weight
-        forecast_n: 2
-        forecast_interval: week
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
@@ -341,11 +325,6 @@
       measure: max_bodyweight
       type: max
       _type_hint: number
-    analysis_config:
-      forecasting:
-      - field_name: max_bodyweight
-        forecast_n: 2
-        forecast_interval: week
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
