@@ -67,6 +67,28 @@ view: my_bw_journal {
   dimension: weight {
     type: number
     sql: ${TABLE}.weight ;;
+    action:  {
+      label: "Objection"
+      url: "https://example.com/posts"
+      icon_url: "https://looker.com/favicon.ico"
+      form_url: "https://example.com/ping/{{ value }}/form.json"
+      param: {
+        name: "name string"
+        value: "value string"
+      }
+      form_param: {
+        name:  "name string"
+        type: textarea
+        label:  "possibly-localized-string"
+        option: {
+          name:  "name string"
+          label:  "possibly-localized-string"
+        }
+        required:  yes
+        description:  "possibly-localized-string"
+        default:  "string"
+      }
+    }
   }
   measure: count {
     type: count
