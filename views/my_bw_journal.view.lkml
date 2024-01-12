@@ -8,8 +8,72 @@ view: my_bw_journal {
   # This primary key is the unique key for this table in the underlying database.
   # You need to define a primary key in a view in order to join to other views.
 
-  dimension: id {
+  dimension: pk {
     primary_key: yes
+    type: number
+    sql: ${TABLE}.pk ;;
+    action:  {
+      label: "Objection"
+      url: "https://europe-west1-erkan-celen-sndbx-b.cloudfunctions.net/looker-slack"
+      icon_url: "https://www.pngall.com/wp-content/uploads/4/Exclamation-Mark-Symbol-PNG-Clipart.png"
+      form_param: {
+        name: "name"
+        type: string
+        label: "name"
+        required: yes
+        default: "{{_user_attributes['name']}}"
+      }
+      form_param: {
+        name: "text"
+        type: string
+        label: "comments"
+        required: yes
+        default: "Type your objection here"
+      }
+      param: {
+        name: "action_type"
+        value: "objection"
+      }
+    }
+    action: {
+      label: "Validation"
+      url: "https://europe-west1-erkan-celen-sndbx-b.cloudfunctions.net/looker-slack"
+      icon_url: "https://cdn.pixabay.com/photo/2013/07/13/10/08/green-156618_960_720.png"
+      param: {
+        name: "action_type"
+        value: "validation"
+      }
+      param: {
+        name: "name"
+        value: "{{_user_attributes['name']}}"
+      }
+    }
+    action: {
+      label: "Add a Comment"
+      url: "https://europe-west1-erkan-celen-sndbx-b.cloudfunctions.net/looker-slack"
+      icon_url: "https://cdn.iconscout.com/icon/free/png-256/free-comment-3251596-2724645.png"
+      param: {
+        name: "action_type"
+        value: "comment"
+      }
+      form_param: {
+        name: "name"
+        type: string
+        label: "name"
+        required: yes
+        default: "{{_user_attributes['name']}}"
+      }
+      form_param: {
+        name: "text"
+        type: string
+        label: "comments"
+        required: yes
+        default: "Type your comments here"
+      }
+    }
+  }
+
+  dimension: id {
     type: number
     sql: ${TABLE}.id ;;
   }
@@ -67,29 +131,8 @@ view: my_bw_journal {
   dimension: weight {
     type: number
     sql: ${TABLE}.weight ;;
-    action:  {
-      label: "Objection"
-      url: "https://url.example"
-      icon_url: "https://cdn-icons-png.flaticon.com/512/10295/10295693.png"
-      form_url: "https://url.example/{{ value }}/form.json"
-      param: {
-        name: "text"
-        value: "value string"
-      }
-    #   # form_param: {
-    #   #   name:  "text"
-    #   #   type: textarea
-    #   #   label:  "comments"
-    #   #   # option: {
-    #   #   #   name:  "text"
-    #   #   #   label:  "possibly-localized-string"
-    #   #   # }
-    #   #   required:  yes
-    #   #   description:  "possibly-localized-string"
-    #   #   default:  "string"
-    #   # }
-    }
   }
+
   measure: count {
     type: count
     drill_fields: [id]

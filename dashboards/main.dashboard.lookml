@@ -392,13 +392,13 @@
     model: my_bw_journal
     explore: my_bw_journal
     type: looker_grid
-    fields: [my_bw_journal.date_date, my_bw_journal.id, my_bw_journal.excercise, my_bw_journal.set,
-      my_bw_journal.reps, my_bw_journal.weight, my_bw_journal.bodyweight, my_bw_journal.comments]
-    sorts: [my_bw_journal.date_date desc]
+    fields: [my_bw_journal.pk, my_bw_journal.id, my_bw_journal.date_date, my_bw_journal.excercise, my_bw_journal.set,
+      my_bw_journal.reps, my_bw_journal.weight, my_bw_journal.bodyweight, my_bw_journal_validations.validated, my_bw_journal_comments.comment]
+    sorts: [my_bw_journal.pk desc]
     limit: 500
     column_limit: 50
     show_view_names: false
-    show_row_numbers: true
+    show_row_numbers: false
     transpose: false
     truncate_text: true
     hide_totals: false
